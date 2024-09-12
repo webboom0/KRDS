@@ -1,0 +1,71 @@
+/* header-top : 공식배너 */
+#header-top {
+  background-color: var(--gray-5);
+}
+
+#header-top .nuri-txt {
+  display: flex;
+  padding: 0.5rem 2rem;
+  gap: 5px;
+  align-items: center;
+  font-size: 15px;
+}
+
+#header-top .nuri-txt::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  background-image: url(../img/layout/top_ban_ico_flag.svg);
+  background-repeat: no-repeat;
+}
+
+/* header */
+#header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  background-color: #ffffff;
+  border: solid 2px #f00;
+  overflow: hidden;
+}
+
+#header .head-etc {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#header .head-etc .etc-ul {
+  display: flex;
+  gap: 0.8rem;
+}
+
+#header .head-etc .etc-ul > * {
+  display: inline-flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+#header .head-etc .etc-ul > *::before {
+  content: "";
+  display: inline-flex;
+  width: 1px;
+  height: 1em;
+  background-color: var(--gray-30);
+}
+
+#header .head-etc .etc-ul > *:first-child::before {
+  display: none;
+}
+
+#header .head-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .head-in .right {
+  display: flex;
+  gap: var(--krds-spacer-3);
+}

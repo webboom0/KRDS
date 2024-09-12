@@ -1,0 +1,154 @@
+@import url(common/reset.css);
+@import url(common/krds.css);
+@import url(common/components.css);
+@import url(fonts/PretendardGOV/PretendardGOV.css);
+@import url(header.css);
+
+:root {
+  --primary-5: #eff5ff;
+  --primary-10: #d3e1fb;
+  --primary-20: #a7c4f7;
+  --primary-30: #7ca6f3;
+  /*  wdith-white : 아래부터 글자 흰색 */
+  --primary-40: #5089ef;
+  --primary-50: #246beb;
+  --primary-60: #1d56bc;
+  --primary-70: #16408d;
+  --primary-80: #de2b5e;
+  --primary-90: #07152f;
+
+  --secontary-50: #003675;
+
+  /* background */
+  --gray-0: #ffffff;
+  --gray-5: #f8f8f8;
+  --gray-10: #f0f0f0;
+  --gray-20: #e4e4e4;
+  /* border */
+  --gray-30: #dbdbdb;
+  --gray-40: #c6c6c6;
+  /* text-disabled , 아래부터 텍스트 화이트 */
+  --gray-50: #bebebe;
+  --gray-60: #717171;
+  /* text-body */
+  --gray-70: #555555;
+  --gray-80: #2d2d2d;
+  /*  text-title */
+  --gray-90: #1d1d1d;
+  --gray-100: #000000;
+}
+
+/* placeholder  */
+::-mos-input-placeholder {
+  color: #999;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--gray-60);
+  opacity: 1;
+  line-height: 1.5em;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--gray-60);
+  opacity: 1;
+  line-height: 1.5em;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* 기본 폰트 설정 - font: font-style font-variant font-weight font-size/line-height font-family */
+body {
+  font: normal 400 var(--krds-fz-body-md) / 150% "Pretendard GOV", sans-serif;
+  color: var(--gray-90);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-50);
+}
+
+/* skip link */
+#skip-nav {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#skip-nav a:focus {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 숨기기 - 스크린리더 인식  */
+.blind,
+hr,
+.sr-only,
+legend,
+caption {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
+/* 숨기기 */
+.hdn,
+.hidden {
+  display: none !important;
+}
+
+/* drop-menu */
+.krds-drop-wrap {
+  position: relative;
+}
+
+.krds-drop-wrap .drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: solid 1px var(--gray-30);
+  background-color: #fff;
+  border-radius: var(--krds-rd-8);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+  min-width: 13rem;
+  transform: translateX(-50%);
+  padding: var(--krds-spacer-3);
+  display: none;
+}
+
+.krds-drop-wrap.active .drop-menu {
+  display: block;
+}
+
+.krds-drop-wrap.active .drop-btn.ico-arr-down::after {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
