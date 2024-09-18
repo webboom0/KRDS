@@ -96,30 +96,30 @@ input[type=button] {
 }
 
 ::-moz-selection {
-  background: var(--krds-secondary);
-  color: var(--krds-white);
+  background: #003675;
+  color: #fff;
 }
 
 ::selection {
   background: #003675;
-  color: var(--krds-white);
+  color: #fff;
 }
 
 /* placeholder  */
 ::-mos-input-placeholder {
-  color: var(--gray-60);
+  color: #717171;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--gray-60);
+  color: #717171;
   opacity: 1;
   line-height: 1.5em;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--gray-60);
+  color: #717171;
   opacity: 1;
   line-height: 1.5em;
 }
