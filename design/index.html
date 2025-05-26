@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유럽MDR플랫폼폼</title>
+    <style>
+      @font-face {
+        font-family: "RiaSans-ExtraBold";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "RiaSans-ExtraBold";
+        background: url(bg.jpg) no-repeat;
+        background-size: cover;
+        background: linear-gradient(90deg, #11a79c, #0052a4);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      ul,
+      li {
+        list-style-type: none;
+      }
+
+      img {
+        cursor: pointer;
+      }
+
+      .cont {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        padding: 30px 0;
+      }
+
+      .cont > * {
+        flex-grow: 1;
+        border-radius: 50px 0px 0 0;
+        position: relative;
+        height: 600px;
+      }
+
+      .tit {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em;
+        position: absolute;
+        padding: 0.7em 1em;
+        border-radius: 100px;
+        z-index: 2;
+        background: linear-gradient(45deg, #11a79c, #0052a4);
+        color: #fff;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        min-width: 245px;
+        border: solid 3px #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .img {
+        flex-grow: 1;
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        background: #fff;
+      }
+
+      .img::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.5s ease 0s;
+      }
+
+      .cont a {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        transition: all 0.5s ease 0s;
+      }
+
+      .cont a:hover {
+        transform: translateY(-10px);
+      }
+
+      .cont a:hover .img::before {
+        opacity: 1;
+      }
+
+      .cont a:hover::before {
+        content: "이동하기";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        color: #fff;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* .cont a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+  }*/
+
+      .head {
+        padding: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 4em;
+        text-shadow: 0px 0px 10px rgb(10 20 106/40%);
+      }
+
+      .wrap {
+        height: 100vh;
+        min-height: 1000px;
+        min-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <p>유럽MDR플랫폼폼</p>
+        <p class="small">메인 시안 디자인</p>
+      </div>
+      <ul class="cont">
+        <li>
+          <a href="main1.html">
+            <div class="tit">A안</div>
+            <div class="img">
+              <img src="A.jpg" alt="" />
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="main2.html">
+            <div class="tit">B안</div>
+            <div class="img">
+              <img src="B.jpg" alt="" />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
