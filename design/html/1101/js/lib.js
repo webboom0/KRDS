@@ -406,12 +406,12 @@ const pauseBtn = function (el, swiper) {
 function shareToggle(el) {
   el.parentNode.classList.toggle("active");
   el.classList.toggle("toggle");
-  const titleArr = ["열기", "닫기"];
+  const titleArr = ["열기","닫기"];
   el.setAttribute("title", titleArr[toggleEl.classList.contains("toggle") ? 1 : 0]);
 }
 
-// 최근본 컨텐츠 리스트
-const recentContents = {
+ // 최근본 컨텐츠 리스트
+ const recentContents = {
   open: function () {
     document.querySelector('.recentContents-list').classList.add('active');
   },
@@ -453,10 +453,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("scroll", function () {
     console.log(this.documentElement.scrollTop);
-    if (this.documentElement.scrollTop > 100) {
-      document.querySelector("body").classList.remove("main-top");
+    if(this.documentElement.scrollTop > 100) {
+        document.querySelector("body").classList.remove("main-top");
     } else {
-      document.querySelector("body").classList.add("main-top");
+        document.querySelector("body").classList.add("main-top");
     }
   });
 

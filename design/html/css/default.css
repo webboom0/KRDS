@@ -41,12 +41,14 @@
   color: #fff;
 }
 
-.bg-blue, .C01 {
+.bg-blue,
+.C01 {
   background-color: #1194DB !important;
   color: #fff !important;
 }
 
-.bg-darkBlue, .C02 {
+.bg-darkBlue,
+.C02 {
   background-color: #345A86 !important;
   color: #fff !important;
 }
@@ -175,10 +177,10 @@ input[type="checkbox"]:focus+label {
 }
 
 /* 최근본 컨텐츠 리스트 버튼 */
-.recentContents-btn {
+body .recentContents-btn {
   position: fixed;
   bottom: 10rem;
-  right: 2rem;
+  right: 5rem;
   z-index: 10;
   width: 6.2rem;
   height: 6.2rem;
@@ -194,12 +196,6 @@ input[type="checkbox"]:focus+label {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-scroll .recentContents-btn {
-  bottom: 5rem;
-  right: 5rem;
-}
-
-
 .recentContents-btn::before {
   content: "";
   display: flex;
@@ -211,6 +207,11 @@ input[type="checkbox"]:focus+label {
 
 .recentContents-btn:hover::before {
   animation: shake 0.5s ease-in-out;
+}
+
+.main-top .recentContents-btn,
+.main-top .recentContents-btn {
+  bottom: 3rem !important;
 }
 
 @keyframes shake {
@@ -381,15 +382,12 @@ input[type="checkbox"]:focus+label {
 }
 
 
-.main-scroll .topBtn {
-  display: none;
-}
 
 /* topBtn */
-.topBtn {
+*:not(.main-top) .topBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 5rem;
   z-index: 10;
   width: 6.2rem;
   height: 6.2rem;
@@ -409,12 +407,25 @@ input[type="checkbox"]:focus+label {
   transform: rotate(90deg) translateX(-5px);
 }
 
+.main-top .topBtn {
+  display: none;
+}
+
 .topBtn i {
   font-size: 2em;
   display: block;
   transform: rotate(90deg);
   transition: all .3s ease-out 0s;
 }
+
+@media (max-width: 1480px) {
+
+  .topBtn,
+  body .recentContents-btn {
+    right: 2rem;
+  }
+}
+
 
 
 /* rotation */

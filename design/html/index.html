@@ -604,6 +604,13 @@
             allowTouchMove: false,
             speed: 1000,
             on: {
+              init: function (e) {
+                if (e.activeIndex == 0) {
+                  wrap.classList.add("main-top");
+                } else {
+                  wrap.classList.remove("main-top");
+                }
+              },
               slideChangeTransitionStart: function (e) {
                 if (e.activeIndex == 0) {
                   wrap.classList.add("main-top");
