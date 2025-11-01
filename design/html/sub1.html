@@ -17,6 +17,7 @@
   <script src="js/swiper.min.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/lib.js"></script>
+  <script src="js/sub.js"></script>
 </head>
 
 <body>
@@ -258,20 +259,13 @@
                       <li>최신 규제 동향 제공을 위한 뉴스레터 발행</li>
                     </ul>
                   </div>
-                  <div class="photo-group">
-                    <div class="swiper swiper-poster mt1 mb1">
-                      <ul class="swiper-wrapper">
-                        <li class="swiper-slide"><img src="kor/img/center_img_01.png" alt=""></li>
-                        <li class="swiper-slide"><img src="kor/img/center_img_02.png" alt=""></li>
-                        <li class="swiper-slide"><img src="kor/img/center_img_03.png" alt=""></li>
-                        <li class="swiper-slide"><img src="kor/img/center_img_04.png" alt=""></li>
-                      </ul>
-                    </div>
-                    <div class="controllers">
-                      <div class="poster-pagination"></div>
-                      <button type="button" class="pause" onclick="pauseBtn(this, swiperPoster)"><i
-                          class="ri-pause-line"></i><span class="blind">일시정지</span></button>
-                    </div>
+                  <div class="scroll-box-row mt1 mb1" style="cursor: default;">
+                    <ul class="img-group fix-cont-sm pl0">
+                      <li><img src="kor/img/center_img_01.png" alt=""></li>
+                      <li><img src="kor/img/center_img_02.png" alt=""></li>
+                      <li><img src="kor/img/center_img_03.png" alt=""></li>
+                      <li><img src="kor/img/center_img_04.png" alt=""></li>
+                    </ul>
                   </div>
                 </li>
                 <li class="flex column gap-1">
@@ -300,6 +294,7 @@
                       <li>글로벌 MDR 세미나 등을 개최하여 최신 정보 공유</li>
                     </ul>
                   </div>
+                  <!-- [수정]  롤링으로 변경 -->
                   <div class="photo-group">
                     <div class="swiper swiper-photo mt1 mb1">
                       <ul class="swiper-wrapper">
@@ -308,6 +303,10 @@
                         <li class="swiper-slide"><img src="kor/img/center_img_07.png" alt=""></li>
                         <li class="swiper-slide"><img src="kor/img/center_img_08.png" alt=""></li>
                       </ul>
+                      <button type="button" class="photo-button-prev"><i class="ri-arrow-left-s-line"></i><span
+                          class="blind">이전</span></button>
+                      <button type="button" class="photo-button-next"><i class="ri-arrow-right-s-line"></i><span
+                          class="blind">다음</span></button>
                     </div>
                     <div class="controllers">
                       <div class="photo-pagination"></div>
@@ -315,6 +314,7 @@
                           class="ri-pause-line"></i><span class="blind">일시정지</span></button>
                     </div>
                   </div>
+                  <!-- // [수정]  롤링으로 변경 -->
                 </li>
               </ul>
 
@@ -424,95 +424,98 @@
         <!-- 컨텐츠 끝 -->
       </div>
     </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="link-group">
+            <a href="#">개인정보처리방침</a>
+            <a href="#">영상정보처리기기 운영·방침</a>
+            <a href="#">홈페이지이용약관</a>
+            <a href="#">이메일수집거부</a>
+            <a href="#">사이트맵</a>
+            <a href="#">찾아오시는길</a>
+          </div>
+          <div class="sns">
+            <a href="#" class="sns-btn" target="_blank" rel="noopener noreferrer" title="새창으로열림"><i
+                class="ri-instagram-line"></i><span class="blind">인스타그램</span></a>
+            <a href="#" class="sns-btn" target="_blank" rel="noopener noreferrer" title="새창으로열림"><i
+                class="ri-youtube-line"></i><span class="blind">유튜브</span></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <address>(우 08389) 서울특별시 구로구 디지털로30길 28, 마리오타워 102~104, 107, 208, 303-1, 304, 305, 312호</address>
+          <ul>
+            <li><strong>대표자 :</strong> 이정림</li>
+            <li><strong>사업자등록번호 :</strong> 113-82-08022</li>
+            <li><strong>대표전화 :</strong> 1588-4183</li>
+          </ul>
+          <p class="copyright">COPYRIGHT(C) National Institute of Medical Device Safety Information. All right reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- // footer -->
+
+    <!-- 최신본 컨텐츠 리스트 -->
+    <div class="recentContents-wrap">
+      <!-- 최근본 버튼 -->
+      <button type="button" class="recentContents-btn" onclick="recentContents.open()">
+        <span class="txt">최근본</span><span class="count">2</span>
+      </button>
+      <!-- 최근본 리스트 박스 -->
+      <div class="recentContents-list">
+        <div class="tit-group">
+          <h2 class="tit">최근 본 <span class="num">2</span></h2>
+          <div class="btn-group">
+            <button type="button" class="allDel-btn"><span>전체삭제</span></button>
+            <button type="button" class="close-btn rotation" onclick="recentContents.close()"><span class="blind">최신글
+                리스트 창 닫기</span><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <ul class="list">
+          <li>
+            <a href="#">
+              <div class="thumb">
+                <img src="images/thumb_none.png" alt="썸넴일 없음">
+              </div>
+              <div class="cont">
+                <span class="subj">뉴스레터 MDR 똑똑(‘25년 1분기)</span>
+                <span class="date">2025.05.05</span>
+              </div>
+            </a>
+            <button type="button" class="del-btn"><span class="blind">삭제</span><i
+                class="ri-close-line rotation"></i></button>
+          </li>
+          <li>
+            <a href="#">
+              <div class="thumb">
+                <img src="images/thumb_none.png" alt="썸넴일 없음">
+              </div>
+              <div class="cont">
+                <span class="subj">뉴스레터 MDR 똑똑(‘25년 1분기)</span>
+                <span class="date">2025.05.05</span>
+              </div>
+            </a>
+            <button type="button" class="del-btn"><span class="blind">삭제</span><i
+                class="ri-close-line rotation"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- // 최신본 컨텐츠 리스트 -->
+
+    <!--  상단 이동 버튼 -->
+    <button type="button" class="topBtn" onclick="moveTop()"><i class="ri-contract-left-line"></i>TOP<span
+        class="blind">상단으로 이동</span></button>
   </div>
   <!-- //  sub-contents -->
 
-  <!-- footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="link-group">
-          <a href="#">개인정보처리방침</a>
-          <a href="#">영상정보처리기기 운영·방침</a>
-          <a href="#">홈페이지이용약관</a>
-          <a href="#">이메일수집거부</a>
-          <a href="#">사이트맵</a>
-          <a href="#">찾아오시는길</a>
-        </div>
-        <div class="sns">
-          <a href="#" class="sns-btn" target="_blank" rel="noopener noreferrer" title="새창으로열림"><i
-              class="ri-instagram-line"></i><span class="blind">인스타그램</span></a>
-          <a href="#" class="sns-btn" target="_blank" rel="noopener noreferrer" title="새창으로열림"><i
-              class="ri-youtube-line"></i><span class="blind">유튜브</span></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <address>(우 08389) 서울특별시 구로구 디지털로30길 28, 마리오타워 102~104, 107, 208, 303-1, 304, 305, 312호</address>
-        <ul>
-          <li><strong>대표자 :</strong> 이정림</li>
-          <li><strong>사업자등록번호 :</strong> 113-82-08022</li>
-          <li><strong>대표전화 :</strong> 1588-4183</li>
-        </ul>
-        <p class="copyright">COPYRIGHT(C) National Institute of Medical Device Safety Information. All right reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
-  <!-- // footer -->
 
-  <!-- 최신본 컨텐츠 리스트 -->
-  <div class="recentContents-wrap">
-    <!-- 최근본 버튼 -->
-    <button type="button" class="recentContents-btn" onclick="recentContents.open()">
-      <span class="txt">최근본</span><span class="count">2</span>
-    </button>
-    <!-- 최근본 리스트 박스 -->
-    <div class="recentContents-list">
-      <div class="tit-group">
-        <h2 class="tit">최근 본 <span class="num">2</span></h2>
-        <div class="btn-group">
-          <button type="button" class="allDel-btn"><span>전체삭제</span></button>
-          <button type="button" class="close-btn rotation" onclick="recentContents.close()"><span class="blind">최신글
-              리스트 창 닫기</span><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-      <ul class="list">
-        <li>
-          <a href="#">
-            <div class="thumb">
-              <img src="images/thumb_none.png" alt="썸넴일 없음">
-            </div>
-            <div class="cont">
-              <span class="subj">뉴스레터 MDR 똑똑(‘25년 1분기)</span>
-              <span class="date">2025.05.05</span>
-            </div>
-          </a>
-          <button type="button" class="del-btn"><span class="blind">삭제</span><i
-              class="ri-close-line rotation"></i></button>
-        </li>
-        <li>
-          <a href="#">
-            <div class="thumb">
-              <img src="images/thumb_none.png" alt="썸넴일 없음">
-            </div>
-            <div class="cont">
-              <span class="subj">뉴스레터 MDR 똑똑(‘25년 1분기)</span>
-              <span class="date">2025.05.05</span>
-            </div>
-          </a>
-          <button type="button" class="del-btn"><span class="blind">삭제</span><i
-              class="ri-close-line rotation"></i></button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- // 최신본 컨텐츠 리스트 -->
-
-  <!--  상단 이동 버튼 -->
-  <button type="button" class="topBtn" onclick="moveTop()"><i class="ri-contract-left-line"></i>TOP<span
-      class="blind">상단으로 이동</span></button>
   </div>
   <!-- // wrap -->
+  <!-- [수정]  롤링 스크립트 -->
   <script>
     // 사진 슬라이드
     var swiperPhoto = new Swiper('.swiper-photo', {
@@ -536,6 +539,10 @@
         el: '.photo-pagination',
         clickable: true,
       },
+      navigation: {
+        nextEl: '.photo-button-next',
+        prevEl: '.photo-button-prev',
+      },
     });
 
     document.querySelector(".swiper-photo").addEventListener('mouseenter', function () {
@@ -545,35 +552,6 @@
       swiperPhoto.autoplay.start();
     });
 
-    // 포스터 슬라이드
-    var swiperPoster = new Swiper('.swiper-poster', {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3.5,
-          spaceBetween: 30,
-        },
-      },
-      pagination: {
-        el: '.poster-pagination',
-        clickable: true,
-      },
-    });
-    document.querySelector(".swiper-poster").addEventListener('mouseenter', function () {
-      swiperPoster.autoplay.pause();
-    });
-    document.querySelector(".swiper-poster").addEventListener('mouseleave', function () {
-      swiperPoster.autoplay.start();
-    });
   </script>
 </body>
 
