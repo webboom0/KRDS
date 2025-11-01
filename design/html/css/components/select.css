@@ -1,0 +1,75 @@
+/* 기본 셀렉트 박스 스타일 */
+select._select {
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  appearance: none;
+  align-items: center;
+  gap: 24px;
+  padding-left: 16px;
+  padding-right: 28px;
+  vertical-align: middle;
+  width: clamp(3em, 10em, 100%);
+  height: var(--component-height-md);
+  font-size: var(--component-font-size-md);
+  border-radius: var(--component-border-radius-md);
+  background-image: linear-gradient(45deg, transparent 50%, #808080 50%), linear-gradient(135deg, #808080 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16.1px) calc(1px + 50%);
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+/* 자동 너비 설정 */
+select._select.wAuto {
+  width: auto !important;
+}
+
+/* 포커스 상태 */
+select._select:focus,
+select._select:focus-within {
+  border-color: #374151;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2) inset;
+  outline: 2px solid #374151;
+  outline-offset: 2px;
+}
+
+/* 비활성화 상태 */
+select._select:has(> select[disabled]),
+select._select:is(:disabled, [disabled]) {
+  border-color: #e5e7eb;
+  background-color: #f3f4f6;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: not-allowed;
+}
+
+select._select:has(> select[disabled])>select[disabled] {
+  cursor: not-allowed;
+}
+
+/* 크기 변형 */
+select._select-sm {
+  height: var(--component-height-sm);
+  font-size: var(--component-font-size-sm);
+  padding: 0px 28px 0px 10px;
+}
+
+select._select-xs select,
+select._select-sm select {
+  margin-left: -8px;
+  margin-right: -20px;
+}
+
+select._select-md {
+  height: var(--component-height-md);
+  font-size: var(--component-font-size-md);
+}
+
+select._select-lg {
+  height: var(--component-height-lg);
+  font-size: var(--component-font-size-lg);
+}

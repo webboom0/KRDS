@@ -1,0 +1,116 @@
+/* 기본 라디오 버튼 스타일 */
+._radio {
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  padding: 4px;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1) inset;
+  width: 24px;
+  height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* 라디오 버튼 내부 원형 표시 */
+._radio:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 라벨 스타일 */
+._radio + label {
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 6px;
+}
+
+/* 포커스 상태 */
+._radio:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 선택된 상태 */
+._radio:checked,
+._radio[aria-checked="true"] {
+  animation: radio 0.2s ease-out;
+  background-color: #ffffff;
+  border-color: currentColor;
+}
+
+._radio:checked:before,
+._radio[aria-checked="true"]:before {
+  background-color: currentColor;
+  box-shadow: 0 -1px rgba(0, 0, 0, 0.1) inset,
+    0 8px 0 -4px rgba(255, 255, 255, 0.1) inset,
+    0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 강제 색상 모드 (고대비) */
+@media (forced-colors: active) {
+  ._radio:checked:before,
+  ._radio[aria-checked="true"]:before {
+    outline: 4px solid;
+    outline-offset: -16px;
+  }
+}
+
+/* 인쇄 모드 */
+@media print {
+  ._radio:checked:before,
+  ._radio[aria-checked="true"]:before {
+    outline: 4px solid;
+    outline-offset: -16px;
+  }
+}
+
+/* 비활성화 상태 */
+._radio:disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+
+/* 크기 변형 */
+._radio-sm {
+  padding: var(--component-checkRadio-padding-sm);
+  width: var(--component-checkRadio-size-sm);
+  height: var(--component-checkRadio-size-sm);
+}
+
+._radio-md {
+  padding: var(--component-checkRadio-padding-md);
+  width: var(--component-checkRadio-size-md);
+  height: var(--component-checkRadio-size-md);
+}
+
+._radio-lg {
+  padding: var(--component-checkRadio-padding-lg);
+  width: var(--component-checkRadio-size-lg);
+  height: var(--component-checkRadio-size-lg);
+}
+
+/* 라디오 버튼 애니메이션 */
+@keyframes radio {
+  0% {
+    padding: 5px;
+  }
+  50% {
+    padding: 3px;
+  }
+  100% {
+    padding: 4px;
+  }
+}

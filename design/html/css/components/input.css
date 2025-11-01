@@ -1,0 +1,132 @@
+input._input {
+  cursor: text;
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  position: relative;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  gap: 2px;
+  padding: 0 8px;
+  white-space: nowrap;
+  width: clamp(3em, 20em, 100%);
+  height: var(--component-height-md);
+  font-size: var(--component-font-size-md);
+  font-family: inherit;
+  border-radius: var(--component-border-radius-md);
+  border-color: var(--component-border-color);
+}
+
+input._input:where(input) {
+  display: inline-flex;
+}
+
+input._input :where(input) {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+input._input :where(input):focus,
+input._input :where(input):focus-within {
+  outline: none;
+}
+
+input._input:focus,
+input._input:focus-within {
+  border-color: #374151;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2) inset;
+  outline: 2px solid #374151;
+  outline-offset: 2px;
+  isolation: isolate;
+}
+
+input._input:has(> input[disabled]),
+input._input:is(:disabled, [disabled]) {
+  border-color: #e5e7eb;
+  background-color: #f3f4f6;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 크기 변형 */
+input._input-sm {
+  height: var(--component-height-sm);
+  font-size: var(--component-font-size-sm);
+}
+
+input._input-md {
+  height: var(--component-height-md);
+  font-size: var(--component-font-size-md);
+}
+
+input._input-lg {
+  height: var(--component-height-lg);
+  font-size: var(--component-font-size-lg);
+}
+
+/* 색상 변형 */
+input._input-neutral {
+  border-color: var(--color-neutral);
+}
+
+input._input-primary {
+  border-color: var(--color-primary);
+}
+
+input._input-secondary {
+  border-color: var(--color-secondary);
+}
+
+input._input-accent {
+  border-color: var(--color-accent);
+}
+
+input._input-info {
+  border-color: var(--color-info);
+}
+
+input._input-success {
+  border-color: var(--color-success);
+}
+
+input._input-warning {
+  border-color: var(--color-warning);
+}
+
+input._input-error {
+  border-color: var(--color-error);
+}
+
+/* 고스트 스타일 */
+input._input-ghost {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+input._input-ghost:focus,
+input._input-ghost:focus-within {
+  color: #374151;
+  background-color: #ffffff;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* 특수 입력 타입 스타일링 */
+input._input::-webkit-date-and-time-value {
+  text-align: inherit;
+}
+
+input._input[type="number"]::-webkit-inner-spin-button {
+  margin: -3px -3px;
+}
+
+input._input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 12px;
+}

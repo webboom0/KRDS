@@ -1,0 +1,181 @@
+/* 기본 파일 입력 스타일 */
+._file-input {
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  user-select: none;
+  width: clamp(3em, 20em, 100%);
+  height: var(--component-height-md);
+  padding-right: 12px;
+  font-size: var(--component-font-size-sm);
+  font-family: inherit;
+  line-height: 2;
+  border-radius: var(--component-border-radius-md);
+}
+
+/* 파일 선택 버튼 스타일 */
+._file-input::file-selector-button {
+  margin-right: 4px;
+  cursor: pointer;
+  padding: 0 4px;
+  user-select: none;
+  height: calc(100% + 2px);
+  margin: -1px;
+  font-size: var(--component-font-size-sm);
+  color: #374151;
+  border: 1px solid #9ca3af;
+  border-radius: var(--component-border-radius-md) 0 0 var(--component-border-radius-md);
+  font-weight: 600;
+  background-color: #e5e7eb;
+  text-shadow: 0 0.5px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.1),
+    0 4px 3px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* 크기 변형 */
+._file-input-sm {
+  height: var(--component-height-sm);
+  font-size: var(--component-font-size-sm);
+  line-height: 1.5;
+}
+
+._file-input-md {
+  height: var(--component-height-md);
+  font-size: var(--component-font-size-md);
+  line-height: 2;
+}
+
+._file-input-lg {
+  height: var(--component-height-lg);
+  font-size: var(--component-font-size-lg);
+  line-height: 2.5;
+}
+
+/* 색상 변형 */
+._file-input-primary {
+  border-color: var(--color-primary);
+}
+
+._file-input-primary::file-selector-button {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+  border-color: var(--color-primary-border);
+}
+
+._file-input-secondary {
+  border-color: var(--color-secondary);
+}
+
+._file-input-secondary::file-selector-button {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-content);
+  border-color: var(--color-secondary-border);
+}
+
+._file-input-neutral {
+  border-color: var(--color-neutral);
+}
+
+._file-input-neutral::file-selector-button {
+  background-color: var(--color-neutral);
+  color: var(--color-neutral-content);
+  border-color: var(--color-neutral-border);
+}
+
+._file-input-primary {
+  border-color: var(--color-primary);
+}
+
+._file-input-primary::file-selector-button {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+  border-color: var(--color-primary-border);
+}
+
+._file-input-secondary {
+  border-color: var(--color-secondary);
+}
+
+._file-input-secondary::file-selector-button {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-content);
+  border-color: var(--color-secondary-border);
+}
+
+._file-input-accent {
+  border-color: var(--color-accent);
+}
+
+._file-input-accent::file-selector-button {
+  background-color: var(--color-accent);
+  color: var(--color-accent-content);
+  border-color: var(--color-accent-border);
+}
+
+._file-input-info {
+  border-color: var(--color-info);
+}
+
+._file-input-info::file-selector-button {
+  background-color: var(--color-info);
+  color: var(--color-info-content);
+  border-color: var(--color-info-border);
+}
+
+._file-input-success {
+  border-color: var(--color-success);
+}
+
+._file-input-success::file-selector-button {
+  background-color: var(--color-success);
+  color: var(--color-success-content);
+  border-color: var(--color-success-border);
+}
+
+._file-input-warning {
+  border-color: var(--color-warning);
+}
+
+._file-input-warning::file-selector-button {
+  background-color: var(--color-warning);
+  color: var(--color-warning-content);
+  border-color: var(--color-warning-border);
+}
+
+._file-input-error {
+  border-color: var(--color-error);
+}
+
+._file-input-error::file-selector-button {
+  background-color: var(--color-error);
+  color: var(--color-error-content);
+  border-color: var(--color-error-border);
+}
+
+/* 고스트 스타일 */
+._file-input-ghost {
+  background-color: transparent;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+._file-input-ghost::file-selector-button {
+  margin-left: 0;
+  margin-right: 4px;
+  height: 100%;
+  padding: 0 4px;
+}
+
+/* 비활성화 상태 */
+._file-input:disabled,
+._file-input[disabled] {
+  border-color: #e5e7eb;
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.2);
+}

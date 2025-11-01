@@ -1,0 +1,136 @@
+/* 기본 텍스트영역 스타일 */
+._textarea {
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  border-radius: 6px;
+  min-height: 20px;
+  flex-shrink: 0;
+  appearance: none;
+  padding: 2px;
+  vertical-align: middle;
+  width: clamp(3em, 20em, 100%);
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: var(--component-font-size-md);
+}
+
+/* 텍스트영역 내부 textarea 요소 */
+._textarea textarea {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+._textarea textarea:focus,
+._textarea textarea:focus-within {
+  outline: none;
+}
+
+/* 포커스 상태 */
+._textarea:focus,
+._textarea:focus-within {
+  border-color: #374151;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.2) inset;
+  outline: 2px solid #374151;
+  outline-offset: 2px;
+  isolation: isolate;
+}
+
+/* 비활성화 상태 */
+._textarea:has(> textarea[disabled]),
+._textarea:is(:disabled, [disabled]) {
+  border-color: #e5e7eb;
+  background-color: #f3f4f6;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+._textarea:has(> textarea[disabled]) > textarea[disabled] {
+  cursor: not-allowed;
+}
+
+/* 고스트 스타일 */
+._textarea-ghost {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+._textarea-ghost:focus,
+._textarea-ghost:focus-within {
+  color: #374151;
+  background-color: #ffffff;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* 색상 변형 */
+._textarea-neutral,
+._textarea-neutral:focus,
+._textarea-neutral:focus-within {
+  border-color: var(--color-neutral);
+}
+
+._textarea-primary,
+._textarea-primary:focus,
+._textarea-primary:focus-within {
+  border-color: var(--color-primary);
+}
+
+._textarea-secondary,
+._textarea-secondary:focus,
+._textarea-secondary:focus-within {
+  border-color: var(--color-secondary);
+}
+
+._textarea-accent,
+._textarea-accent:focus,
+._textarea-accent:focus-within {
+  border-color: var(--color-accent);
+}
+
+._textarea-info,
+._textarea-info:focus,
+._textarea-info:focus-within {
+  border-color: var(--color-info);
+}
+
+._textarea-success,
+._textarea-success:focus,
+._textarea-success:focus-within {
+  border-color: var(--color-success);
+}
+
+._textarea-warning,
+._textarea-warning:focus,
+._textarea-warning:focus-within {
+  border-color: var(--color-warning);
+}
+
+._textarea-error,
+._textarea-error:focus,
+._textarea-error:focus-within {
+  border-color: var(--color-error);
+}
+
+/* 크기 변형 */
+._textarea-sm {
+  font-size: var(--component-font-size-sm);
+}
+
+._textarea-md {
+  font-size: var(--component-font-size-md);
+}
+
+._textarea-lg {
+  font-size: var(--component-font-size-lg);
+}
+
+._textarea-xl {
+  font-size: var(--component-font-size-xl);
+}
